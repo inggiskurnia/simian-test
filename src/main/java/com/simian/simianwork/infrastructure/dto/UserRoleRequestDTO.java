@@ -1,5 +1,6 @@
 package com.simian.simianwork.infrastructure.dto;
 
+import com.simian.simianwork.entity.UserRole;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
