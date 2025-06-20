@@ -1,20 +1,17 @@
 package com.simian.simianwork.entity;
 
 import jakarta.persistence.*;
+import jakarta.persistence.Table;
 import lombok.Data;
-import org.hibernate.annotations.ColumnDefault;
-import org.hibernate.annotations.Filter;
-import org.hibernate.annotations.FilterDef;
-import org.hibernate.annotations.SQLDelete;
+import org.hibernate.annotations.*;
 
 import java.time.OffsetDateTime;
 
 @Data
 @Entity
 @Table(name = "roles")
-@SQLDelete(sql = "UPDATE posts SET deleted_at = now() WHERE id = ?")
-@FilterDef(name = "deletedRoleFilter")
-@Filter(name = "deletedRoleFilter", condition = "deleted_at IS NULL")
+@SQLDelete(sql = "UPDATE roles SET deleted_at = now() WHERE id = ?")
+@SQLRestriction("deleted_at IS NULL")
 public class Role {
 
     @Id
