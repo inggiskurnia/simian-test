@@ -8,17 +8,17 @@ import com.simian.simianwork.infrastructure.dto.UserRoleResponseDTO;
 import com.simian.simianwork.infrastructure.repositoy.RoleRepository;
 import com.simian.simianwork.infrastructure.repositoy.UserRepository;
 import com.simian.simianwork.infrastructure.repositoy.UserRoleRepository;
-import com.simian.simianwork.usecase.AssignUserRoleUseCase;
+import com.simian.simianwork.usecase.AssignUserRoleUsecase;
 import org.springframework.stereotype.Service;
 
 @Service
-public class AssignUserRoleUseCaseImpl implements AssignUserRoleUseCase {
+public class AssignUserRoleUsecaseImpl implements AssignUserRoleUsecase {
 
     private final UserRepository userRepository;
     private final UserRoleRepository userRoleRepository;
     private final RoleRepository roleRepository;
 
-    public AssignUserRoleUseCaseImpl(UserRepository userRepository, UserRoleRepository userRoleRepository, RoleRepository roleRepository) {
+    public AssignUserRoleUsecaseImpl(UserRepository userRepository, UserRoleRepository userRoleRepository, RoleRepository roleRepository) {
         this.userRepository = userRepository;
         this.userRoleRepository = userRoleRepository;
         this.roleRepository = roleRepository;
